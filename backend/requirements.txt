@@ -1,0 +1,15 @@
+fastapi==0.162.2
+uvicorn[standard]>=0.30
+sqlalchemy==2.1.8
+alembic>=1.14
+pydantic>=2.9
+pydantic-settings>=2.6
+email-validator>=2.2
+bcrypt==4.2.1
+pyjwt>=2.9
+python-multipart>=0.0.12
+pillow>=11
+opencv-python-headless>=4.10
+numpy>=2.1
+reportlab>=4.2
+psycopg2-binary>=2.9

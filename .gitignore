@@ -1,0 +1,27 @@
+# dependencies and build output
+node_modules/
+dist/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# secrets and local settings (never commit)
+.env
+.env.*
+!.env.example
+backend/.secret_key
+*.pem
+*.key
+
+# databases and uploaded files
+*.db
+*.db-*
+backend/storage/
+
+# test and tool caches
+test-results/
+playwright-report/
+.pytest_cache/
+.ruff_cache/
+.DS_Store

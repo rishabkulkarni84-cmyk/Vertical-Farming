@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/schibsted-grotesk";
+
+@theme {
+  --font-sans: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque Variable", "Schibsted Grotesk Variable", ui-sans-serif, sans-serif;
+
+  --color-ink: #13221b;
+  --color-ink-soft: #3d4f45;
+  --color-muted: #66766c;
+  --color-paper: #f6f7f4;
+  --color-surface: #ffffff;
+  --color-line: #dfe5df;
+  --color-line-strong: #c4cfc6;
+
+  --color-forest-950: #0f2a1f;
+  --color-forest-900: #163a2b;
+  --color-forest-800: #1e4a37;
+  --color-forest-700: #285e47;
+  --color-forest-600: #34735a;
+  --color-sage-50: #f1f5f1;
+  --color-sage-100: #e5ece6;
+  --color-sage-200: #dce5dd;
+  --color-sage-300: #bfcfc3;
+  --color-sage-500: #8da594;
+
+  --color-grow: #3e8e5e;
+  --color-grow-soft: #e3f1e7;
+  --color-warn: #a86b12;
+  --color-warn-soft: #fbf0dc;
+  --color-crit: #a63d2a;
+  --color-crit-soft: #f8e5e0;
+  --color-info: #2f5f86;
+  --color-info-soft: #e4eef6;
+  --color-sim: #6b4fa0;
+  --color-sim-soft: #eee8f7;
+}
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; }
+  body { @apply bg-paper text-ink font-sans; }
+  .tabular-nums, input[type="number"] { font-variant-numeric: tabular-nums; }
+  h1, h2, h3 { @apply font-display; letter-spacing: -0.015em; }
+  :focus-visible { outline: 2px solid var(--color-forest-600); outline-offset: 2px; border-radius: 4px; }
+  ::selection { background: var(--color-sage-300); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+.plan-sheet {
+  background-color: #f3f6f1;
+  background-image: radial-gradient(circle, #cdd8cf 0.6px, transparent 0.7px);
+  background-size: 14px 14px;
+}
